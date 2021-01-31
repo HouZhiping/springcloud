@@ -1,4 +1,4 @@
-package com.hou.cd.controller;
+package com.hou.gy.controller;
 
 import com.hou.cd.entity.Res;
 import org.springframework.beans.factory.annotation.Value;
