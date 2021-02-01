@@ -1,6 +1,6 @@
 package com.hou.gy.controller;
 
-import com.hou.cd.entity.Res;
+import com.hou.gy.entity.Res;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.cloud.context.config.annotation.RefreshScope;
 import org.springframework.web.bind.annotation.GetMapping;
