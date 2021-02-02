@@ -1,0 +1,25 @@
+server:
+  port: 8040
+spring:
+  application:
+    name: gateway
+  cloud:
+    nacos:
+      discovery:
+        server-addr: 127.0.0.1:8848
+    gateway:
+      discovery:
+        locator:
+          enabled: true
+      routes:
+        - id: cd-app-1
+          uri: lb://cd-app
+          predicates:
+          - Path=/cd/**
+          filters:
+#            省略第一个通配符
+          - StripPrefix=1
+        - id: gy-app-1
+          uri: lb://gy-app
+          predicates:
+            - Path=/gy/**

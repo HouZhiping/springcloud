@@ -8,7 +8,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 @RestController
-@RequestMapping("/index")
+@RequestMapping("/gy/index")
 @RefreshScope
 public class IndexController {
 
@@ -25,6 +25,11 @@ public class IndexController {
     @RequestMapping("/get")
     public Res<Boolean> get() {
         return Res.success(useLocalCache);
+    }
+
+    @RequestMapping("/greeting")
+    public Res<String> greeting() {
+        return Res.success("Hello, I am gy-app");
     }
 
 
