@@ -15,10 +15,10 @@ spring:
         - id: cd-app-1
           uri: lb://cd-app
           predicates:
-          - Path=/cd/**
+            - Path=/cd/**
           filters:
-#            Ê¡ÂÔµÚÒ»¸öÍ¨Åä·û
-          - StripPrefix=1
+            # çœç•¥ç¬¬ä¸€ä¸ªé€šé…ç¬¦
+            - StripPrefix=1
         - id: gy-app-1
           uri: lb://gy-app
           predicates:
