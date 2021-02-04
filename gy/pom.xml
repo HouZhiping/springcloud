@@ -37,7 +37,7 @@
 		<dependency>
 			<groupId>com.alibaba.cloud</groupId>
 			<artifactId>spring-cloud-starter-alibaba-nacos-config</artifactId>
-			<version>2.2.3.RELEASE</version>
+			<version>2.2.5.RELEASE</version>
 		</dependency>
 
 		<!--nacos服务发现-->
@@ -45,7 +45,7 @@
 		<dependency>
 			<groupId>com.alibaba.cloud</groupId>
 			<artifactId>spring-cloud-starter-alibaba-nacos-discovery</artifactId>
-			<version>2.2.3.RELEASE</version>
+			<version>2.2.5.RELEASE</version>
 		</dependency>
 
 
