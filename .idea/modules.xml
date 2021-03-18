@@ -6,7 +6,6 @@
       <module fileurl="file://$PROJECT_DIR$/gateway/gateway.iml" filepath="$PROJECT_DIR$/gateway/gateway.iml" />
       <module fileurl="file://$PROJECT_DIR$/gy/gy.iml" filepath="$PROJECT_DIR$/gy/gy.iml" />
       <module fileurl="file://$PROJECT_DIR$/ls/ls.iml" filepath="$PROJECT_DIR$/ls/ls.iml" />
-      <module fileurl="file://$PROJECT_DIR$/.idea/springcloud.iml" filepath="$PROJECT_DIR$/.idea/springcloud.iml" />
     </modules>
   </component>
 </project>
