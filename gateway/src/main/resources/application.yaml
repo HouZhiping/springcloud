@@ -23,3 +23,6 @@ spring:
           uri: lb://gy-app
           predicates:
             - Path=/gy/**
+          filters:
+            # 省略第一个通配符
+            - StripPrefix=1
