@@ -25,7 +25,7 @@ public class IndexController {
     private boolean useLocalCache;
 
 
-    @ApiOperation(value = "1.addButton")
+    @ApiOperation(value = "1.getUseLocalCache")
     @RequestMapping("/get")
     public Res<Boolean> get() {
         return Res.success(useLocalCache);
