@@ -14,8 +14,6 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
-import java.nio.file.Paths;
-
 @Api(tags={"5-buttonManage"})
 @RestController
 @RequestMapping("/index")
@@ -44,16 +42,31 @@ public class IndexController {
     }
 
 
-    public static void main(String[] args) {
 
+
+    public static void main(String[] args) {
+        System.out.println("程序开始");
         try (Playwright playwright = Playwright.create()) {
+            System.out.println("开始创建浏览器");
             BrowserType.LaunchOptions launchOptions = new BrowserType.LaunchOptions();
             launchOptions.setProxy(new Proxy("http://127.0.0.1:7890"));
-            launchOptions.setHeadless(false).setSlowMo(5000);
+            launchOptions.setHeadless(false);
+            launchOptions.setTimeout(600000).setSlowMo(1000);
             Browser browser = playwright.chromium().launch(launchOptions);
+            System.out.println(browser.isConnected());
             Page page = browser.newPage();
-            page.navigate("http://www.facebook.com/");
-            page.screenshot(new Page.ScreenshotOptions().setPath(Paths.get("example.png")));
+            System.out.println(browser.isConnected());
+            browser.onDisconnected((a) -> System.out.println("浏览器关闭回调"));
+            page.navigate("https://twitter.com/login");
+            System.out.println("点击");
+            try {
+                Thread.sleep(5000);
+            } catch (InterruptedException e) {
+                e.printStackTrace();
+            }
+            System.out.println(page.title());
+            browser.close();
+//            page.screenshot(new Page.ScreenshotOptions().setPath(Paths.get("example.png")));
         }
 
 
