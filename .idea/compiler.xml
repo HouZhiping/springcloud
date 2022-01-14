@@ -16,7 +16,7 @@
     <bytecodeTargetLevel>
       <module name="cd" target="1.8" />
       <module name="gateway" target="11" />
-      <module name="gy" target="11" />
+      <module name="gy" target="1.8" />
       <module name="ls" target="11" />
     </bytecodeTargetLevel>
   </component>
